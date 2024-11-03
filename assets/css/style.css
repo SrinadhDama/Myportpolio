@@ -1,10 +1,3 @@
-/**
-* Template Name: Laura
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
@@ -317,32 +310,33 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("D:/sri.jpg") top right;
+  background: url("../img/portfolio/hero-bg.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.65); /* Dark overlay */
   position: absolute;
-  bottom: 0;
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
-#hero .hero-container {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+.hero-container {
+  position: relative;
+  z-index: 2; /* Ensure text appears above the overlay */
+  text-align: center;
+  color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 0 15px;
+  align-items: center;
 }
 
 #hero h1 {
@@ -361,6 +355,7 @@ h6 {
   text-transform: uppercase;
 }
 
+/* Additional styles for the scroll button */
 #hero .btn-scroll {
   transition: 0.4s;
   color: rgba(255, 255, 255, 0.6);
@@ -375,32 +370,33 @@ h6 {
   color: #ffb727;
 }
 
+/* Responsive adjustments */
 @media (min-width: 1024px) {
   #hero {
-    background-attachment: fixed;
+      background-attachment: fixed;
   }
 }
 
 @media (max-width: 575px) {
   #hero h1 {
-    font-size: 40px;
+      font-size: 40px;
   }
-
   #hero h2 {
-    text-align: center;
-    margin-bottom: 30px;
+      text-align: center;
+      margin-bottom: 30px;
   }
 }
 
+/* Animation */
 @keyframes up-down {
   0% {
-    transform: translateY(5px);
+      transform: translateY(5px);
   }
-
   100% {
-    transform: translateY(-5px);
+      transform: translateY(-5px);
   }
 }
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -602,7 +598,7 @@ section {
 }
 
 .about .image {
-  background: url("D:/chinna pic.jpg") center center no-repeat;
+  background: url("../img/portfolio/chinna pic.jpg") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -1312,7 +1308,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("D:/Myportpolio/assets/img/footer-bg.jpeg") top center no-repeat;
+  background: url("../img/footer-bg.jpeg") top center no-repeat;
   background-size: cover;
   color: #fff;
   font-size: 14px;
